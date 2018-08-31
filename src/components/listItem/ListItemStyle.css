@@ -1,0 +1,46 @@
+.item:hover
+{
+    background-color: #003E56;
+    cursor: pointer;
+}
+
+.itemContent
+{
+    display: flex;
+    padding: 6px 0px 6px 8px;
+}
+
+.itemIcon
+{
+    width: 45px;
+    height: 45px;
+    background-color: #AAAAAA;
+}
+
+.textContent
+{
+    width: calc(100% - 50px);
+    padding-left: 8px;
+    margin-top: 3px;
+}
+
+.line
+{
+    width: 100%;
+    height: 1px;
+    background-color: #335360;
+}
+
+.heading
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1em;
+}
+
+.description
+{
+    font-size: 85%;
+    line-height: 1em;
+}
