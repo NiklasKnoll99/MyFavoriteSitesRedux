@@ -4,6 +4,7 @@ import { Mode } from 'chayns-components';
 import Intro from './intro/Intro';
 import PersonFinderContainer from '../containers/PersonFinderContainer';
 import UserListContainer from '../containers/UserListContainer';
+import NewFavForm from '../components/newFavForm/NewFavForm';
 
 const App = () => (
     <div>
@@ -11,7 +12,7 @@ const App = () => (
         <Mode mode={1} group={1}>
             <PersonFinderContainer />
         </Mode>
-        <UserListContainer />
+        <NewFavForm/>
     </div>
 );
 
