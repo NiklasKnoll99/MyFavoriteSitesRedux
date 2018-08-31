@@ -12,7 +12,7 @@ const App = () => (
         <Mode mode={1} group={1}>
             <PersonFinderContainer />
         </Mode>
-        <NewFavForm/>
+        <NewFavForm/><br/>
     </div>
 );
 
