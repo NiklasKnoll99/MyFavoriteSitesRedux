@@ -1,4 +1,5 @@
 import { FETCH_SITES } from '../actions/fetchSites';
+import { CLEAR } from '../actions/clear';
 
 export const initialState = [];
 
@@ -8,7 +9,10 @@ const fetchSites = (state = initialState, action) => {
             if (action.skip > 0)
                 return [...state, ...action.jsonObjects];
             else
-                return [...action.jsonObjects];
+                return action.jsonObjects;
+
+        case CLEAR:
+            return [];
 
         default:
             return state;

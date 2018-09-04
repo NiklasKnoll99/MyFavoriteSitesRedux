@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import fetchSites from '../../actions/fetchSites';
 import '../style/Style.css';
 import '../display/DisplayStyle.css';
+import clear from '../../actions/clear';
 
 class Display extends React.Component {
     
@@ -16,12 +17,22 @@ class Display extends React.Component {
     onSearch(searchStr) {
         this.searchStr = searchStr;
         this.skip = 0;
-        this.props.dispatch(fetchSites(this.searchStr, this.take, this.skip));
+
+        if (this.searchStr != '')
+            this.props.dispatch(fetchSites(this.searchStr, this.take, this.skip));
+
+        else
+            this.props.dispatch(clear());
     };
     
     onLoadMore() {
         this.skip += this.take;
-        this.props.dispatch(fetchSites(this.searchStr, this.take, this.skip));
+        
+        if (this.searchStr != '')
+            this.props.dispatch(fetchSites(this.searchStr, this.take, this.skip));
+
+        else
+            this.props.dispatch(clear());
     };
 
     render() {
