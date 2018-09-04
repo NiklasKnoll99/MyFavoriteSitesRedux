@@ -5,7 +5,7 @@ import Intro from './intro/Intro';
 import PersonFinderContainer from '../containers/PersonFinderContainer';
 import UserListContainer from '../containers/UserListContainer';
 import NewFavForm from '../components/newFavForm/NewFavForm';
-import Display from '../components/display/Display'; // TEMP
+import Display from '../components/display/Display';
 
 const App = () => (
     <div>
@@ -13,8 +13,8 @@ const App = () => (
         <Mode mode={1} group={1}>
             <PersonFinderContainer />
         </Mode>
-        <NewFavForm/>
-        <Display/>
+        <NewFavForm />
+        <Display />
     </div>
 );
 
